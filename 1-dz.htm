@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,35 +9,20 @@
 <body>
 
 <p>
-
-        <input id="firstName" name="firstName" type="text" value="mario" size="25%"><br>
-        <input id="email" name="email" type="text" value="mario@ukr.net" size="25%"><br>
-        <input id="age" name="age" type="text" value="25" size="25%"><br>
-
-        <input onclick="homeTask()" type="submit" value="Task 1 test">
+  <input name="firstName" type="text" value="mario" size="25%" id="name"><br>
+   <input name="email" type="text" value="mario@ukr.net" size="25%" id="mail"><br>
+    <input name="age" type="text" value="25" size="25%" id="year"><br>
 </p>
 
 <!-- скрипт js-->
 <script>
-    function homeTask()
-    {
-        console.log(document.getElementById("firstName").value);
-        console.log(document.getElementById("email").value);
-        console.log(document.getElementById("age").value);
 
-        var OBJhome = {
-            timeHome: 22.20,
-            form: {
-                firstName: document.getElementById("firstName").value,
-                email: document.getElementById("email").value,
-                age: document.getElementById("age").value,
-            }
-        };
-
-        console.log(OBJhome);
-    }
+    let OBJhome = {
+        firstName: document.getElementById("name").value,
+        email: document.getElementById("mail").value,
+        age: document.getElementById("year").value,
+    };
+    console.log(OBJhome);
 </script>
-
-
 </body>
 </html>
