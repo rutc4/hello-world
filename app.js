@@ -2,17 +2,29 @@ let users = [];
 
 let deleteElement = e => {
     if($(e.target).hasClass('remove-btn')) {
-    $(this).parents('tr').remove();    //Удаление нужного элемента из users
+     $(e.target).parents('tr').remove();    //Удаление нужного элемента из users
+
+     users.splice(users.indexOf("stringToRemoveFromArray"), 1);
+
     }
 };
+
 
 
 /*
 $('body').on('click', 'input.remove-btn', function() {
    $(this).parents('tr').remove();  
 });
-*/
 
+var table = document.querySelector('table');
+
+table.onclick = function(event) {
+  event.target.style.backgroundColor = 'yellow';
+
+  alert("target = " + event.target.tagName + ", this=" + this.tagName);
+
+  event.target.style.backgroundColor = '';
+};*/
 
 
 
@@ -25,11 +37,8 @@ let renderUsers = users => {
             <td>${users[index].firstName}</td>
             <td>${users[index].email}</td>
             <td>${users[index].age}</td>
-            <td><img src="${users[index].picture} width="50px" height="50px"></td>
-          
-			 <td> <input class="remove-btn" type="button" value="Remove" onclick="SomeDeleteRowFunction(this);"></td>
-			
-			
+            <td><img src="${users[index].picture}"></td>
+            <td><button class="remove-btn">Remove</button></td>
         </tr>`;
     }
     $('#firstName, #email, #age, #picture').val('');
