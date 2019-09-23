@@ -1,16 +1,17 @@
 let users = [];
-/*
+
 let deleteElement = e => {
     if($(e.target).hasClass('remove-btn')) {
-      //Удаление нужного элемента из users
+    $(this).parents('tr').remove();    //Удаление нужного элемента из users
     }
 };
-*/
 
 
+/*
 $('body').on('click', 'input.remove-btn', function() {
    $(this).parents('tr').remove();  
 });
+*/
 
 
 
